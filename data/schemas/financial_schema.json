@@ -1,0 +1,36 @@
+{
+    "fields": [
+        {
+            "name": "transaction_id",
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "supercell_id",
+            "type": "string",
+            "pattern": "^SC-\\d{6}$"
+        },
+        {
+            "name": "item_name",
+            "type": "string"
+        },
+        {
+            "name": "amount_local",
+            "type": "number",
+            "min": 0
+        },
+        {
+            "name": "currency",
+            "type": "string",
+            "len": 3
+        },
+        {
+            "name": "timestamp",
+            "type": "datetime"
+        },
+        {
+            "name": "amount_usd",
+            "type": "number"
+        }
+    ]
+}
