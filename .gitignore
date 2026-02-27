@@ -1,0 +1,39 @@
+# --- Python Specific ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# --- Jupyter Notebook ---
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+# ยกเว้นไฟล์ .ipynb หลัก (ถ้าต้องการเก็บไว้)
+# !*.ipynb
+
+# --- Project Specific Data ---
+# ไม่เก็บข้อมูลจำลอง (Mockup) ที่สร้างขึ้นมาใหม่
+data/samples/*.csv
+data/samples/*.xlsx
+data/samples/*.json
+
+# ยกเว้นกรณีที่มีไฟล์ตัวอย่างเริ่มต้นที่ต้องการเก็บไว้จริงๆ
+# !project/data/samples/keep_this_sample.csv
+
+# --- Visualization & Reports ---
+*.png
+*.jpg
+*.pdf
+# หรือเจาะจงเฉพาะไฟล์ Report
+month_end_monitoring_dashboard.png
+supercell_month_end_report.csv
+
+# --- OS Specific ---
+.DS_Store
+.DS_Store?
+Thumbs.db
+
+# --- IDE Specific ---
+.vscode/
+.idea/

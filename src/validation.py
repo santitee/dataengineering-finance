@@ -7,6 +7,9 @@ def check_data_integrity(internal_df, store_report_df):
     """
     internal_sum = internal_df.agg(F.sum("amount_usd")).collect()[0][0]
     store_sum = store_report_df.agg(F.sum("amount_usd")).collect()[0][0]
+    # จัดการกรณี DataFrame ว่าง (sum คืนค่า None)
+    internal_sum = internal_sum or 0.0
+    store_sum = store_sum or 0.0
     
     diff = abs(internal_sum - store_sum)
     if diff > 0.01: # อนุโลมให้ผลต่างทศนิยมเล็กน้อย
